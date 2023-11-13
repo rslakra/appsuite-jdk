@@ -36,7 +36,7 @@ package com.devamatre.appsuite.jdk;
  * <p>Copyright: Copyright (c) 2004</p>
  * <p>Company: </p>
  *
- * @author not attributable
+ * @author Rohtash Lakra
  * @version 1.0
  */
 public class TestStaticExample {

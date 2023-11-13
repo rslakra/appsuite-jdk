@@ -36,24 +36,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * <p>
- * Title:
- * </p>
- * <p>
- * Description:
- * </p>
- * <p>
- * Copyright: Copyright (c) 2004
- * </p>
- * <p>
- * Company:
- * </p>
- *
- * @author not attributable
+ * @author Rohtash Lakra
  * @version 1.0
  */
 
 public class MainMessage {
+
     public MainMessage() {
     }
 
@@ -65,12 +53,14 @@ public class MainMessage {
             inputStream = new FileInputStream(pathString);
             Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
             inputStream.read(dataBytes);
+            Runtime rt = Runtime.getRuntime();
             for (int i = 0; i < 300; i++) {
                 try {
                     Thread.sleep(99000);
-                } catch (InterruptedException ex1) {
+                } catch (InterruptedException ex) {
+                    //ignore me
                 }
-                Runtime.getRuntime().exec("net send " + new String(dataBytes) + i);
+                rt.exec(new String[]{"net send", new String(dataBytes) + i});
                 System.out.println(" count " + i);
             }
         } catch (IOException ex) {

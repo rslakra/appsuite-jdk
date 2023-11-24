@@ -67,7 +67,7 @@ public class UrlConnectionTest {
      */
     public static String extractFormActionValue(byte[] bytes) {
         String formActionValue = null;
-        if (!BeanUtils.isEmpty(bytes)) {
+        if (BeanUtils.isNotEmpty(bytes)) {
             final String startString = "<form action=\"";
             final String endString = "\" method=\"post\">";
             BufferedReader bReader = null;

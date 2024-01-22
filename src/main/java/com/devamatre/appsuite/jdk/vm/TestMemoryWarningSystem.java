@@ -33,20 +33,20 @@ package com.devamatre.appsuite.jdk.vm;
 public class TestMemoryWarningSystem {
 
     public static void main(String[] args) {
-//        MemoryWarningSystem.setPercentageUsageThreshold(0.6);
-//        MemoryWarningSystem mws = new MemoryWarningSystem();
-//        mws.addListener(new MemoryWarningSystem.Listener() {
+// MemoryWarningSystem.setPercentageUsageThreshold(0.6);
+// MemoryWarningSystem mws = new MemoryWarningSystem();
+// mws.addListener(new MemoryWarningSystem.Listener() {
 //            public void memoryUsageLow(long usedMemory, long maxMemory) {
 //                System.out.println("Memory usage low!!!");
 //                double percentageUsed = ((double) usedMemory) / maxMemory;
 //                System.out.println("percentageUsed = " + percentageUsed);
 //                MemoryWarningSystem.setPercentageUsageThreshold(0.8);
 //            }
-//        });
+// });
 
-//        Collection<Double> numbers = new LinkedList<Double>();
-//        while (true) {
+// Collection<Double> numbers = new LinkedList<Double>();
+// while (true) {
 //            numbers.add(Math.random());
-//        }
+// }
     }
 }

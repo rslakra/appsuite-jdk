@@ -109,7 +109,7 @@ public class TestString {
         testStringTokenizer();
 
         String value = null;
-//        boolean result = value.equals(VALUE);
+// boolean result = value.equals(VALUE);
         boolean result = VALUE.equals(value);
         System.out.println("result:" + result);
     }

@@ -1,7 +1,7 @@
 package com.devamatre.appsuite.jdk;
 
 import com.devamatre.appsuite.core.BeanUtils;
-import com.devamatre.appsuite.jdk.domain.User;
+import com.devamatre.appsuite.domain.User;
 import com.devamatre.appsuite.jdk.dto.AddressDTO;
 import com.devamatre.appsuite.jdk.dto.StateDTO;
 import com.devamatre.appsuite.jdk.dto.UserDTO;

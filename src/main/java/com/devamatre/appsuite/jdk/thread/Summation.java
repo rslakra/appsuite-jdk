@@ -101,7 +101,7 @@ public class Summation extends Thread {
      */
     public static void main(String[] args) {
         int size = 100000000;
-//        int size = 10000;
+// int size = 10000;
         System.out.println("Starting");
         List<Integer> listNumbers = Summation.listNumbers(size);
 

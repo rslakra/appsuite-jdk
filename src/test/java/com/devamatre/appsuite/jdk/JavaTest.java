@@ -8,6 +8,7 @@ import java.util.Date;
  * Version: 1.0.0
  */
 public class JavaTest {
+
     public static void main(String[] args) {
         Date date = new Date();
         System.out.println(date.getTime());

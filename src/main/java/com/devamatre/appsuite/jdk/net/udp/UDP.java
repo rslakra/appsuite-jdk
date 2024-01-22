@@ -140,14 +140,14 @@
 //     * state variables, does however not start any sockets or threads
 //     */
 //    public UDP() {
-//        ;
+// ;
 //    }
 //
 //    /**
 //     * debug only
 //     */
 //    public String toString() {
-//        return "Protocol UDP(local address: " + local_addr + ")";
+// return "Protocol UDP(local address: " + local_addr + ")";
 //    }
 //
 //
@@ -156,15 +156,15 @@
 //    /* ----------------------- Receiving of MCAST UDP packets ------------------------ */
 //
 //    public void run() {
-//        DatagramPacket  packet;
-//        byte            receive_buf[]=new byte[65000];
-//        int             len;
-//        byte[]          tmp1, tmp2;
+// DatagramPacket  packet;
+// byte            receive_buf[]=new byte[65000];
+// int             len;
+// byte[]          tmp1, tmp2;
 //
-//        // moved out of loop to avoid excessive object creations (bela March 8 2001)
-//        packet=new DatagramPacket(receive_buf, receive_buf.length);
+// // moved out of loop to avoid excessive object creations (bela March 8 2001)
+// packet=new DatagramPacket(receive_buf, receive_buf.length);
 //
-//        while(mcast_receiver != null && mcast_sock != null) {
+// while(mcast_receiver != null && mcast_sock != null) {
 //            try {
 //                packet.setData(receive_buf, 0, receive_buf.length);
 //                mcast_sock.receive(packet);
@@ -220,33 +220,33 @@
 //                Trace.error("UDP.run()", "exception=" + ex + ", stack trace=" + Util.printStackTrace(ex));
 //                Util.sleep(1000); // so we don't get into 100% cpu spinning (should NEVER happen !)
 //            }
-//        }
-//        if(Trace.trace) Trace.info("UDP.run()", "multicast thread terminated");
+// }
+// if(Trace.trace) Trace.info("UDP.run()", "multicast thread terminated");
 //    }
 //
 //    void handleDiagnosticProbe(InetAddress sender, int port) {
-//        try {
+// try {
 //            byte[]      diag_rsp=getDiagResponse().getBytes();
 //            DatagramPacket rsp=new DatagramPacket(diag_rsp, 0, diag_rsp.length, sender, port);
 //            if(Trace.trace)
 //                Trace.info("UDP.handleDiagnosticProbe()", "sending diag response to " + sender + ":" + port);
 //            send_sock.send(rsp);
-//        }
-//        catch(Throwable t) {
+// }
+// catch(Throwable t) {
 //            Trace.error("UDP.handleDiagnosticProbe()", "failed sending diag rsp to " + sender + ":" + port +
 //                                                       ", exception=" + t);
-//        }
+// }
 //    }
 //
 //    String getDiagResponse() {
-//        StringBuffer sb=new StringBuffer();
-//        sb.append(local_addr).append(" (").append(group_addr).append(")");
-//        sb.append(" [").append(mcast_addr_name).append(":").append(mcast_port).append("]\n");
-//        sb.append("Version=").append(Version.version).append(", cvs=\"").append(Version.cvs).append("\"\n");
-//        sb.append("bound to ").append(bind_addr).append(":").append(bind_port).append("\n");
-//        sb.append("members: ").append(members).append("\n");
+// StringBuffer sb=new StringBuffer();
+// sb.append(local_addr).append(" (").append(group_addr).append(")");
+// sb.append(" [").append(mcast_addr_name).append(":").append(mcast_port).append("]\n");
+// sb.append("Version=").append(Version.version).append(", cvs=\"").append(Version.cvs).append("\"\n");
+// sb.append("bound to ").append(bind_addr).append(":").append(bind_port).append("\n");
+// sb.append("members: ").append(members).append("\n");
 //
-//        return sb.toString();
+// return sb.toString();
 //    }
 //
 //    /* ------------------------------------------------------------------------------- */
@@ -256,15 +256,15 @@
 //    /*------------------------------ Protocol interface ------------------------------ */
 //
 //    public String getName() {
-//        return name;
+// return name;
 //    }
 //
 //
 //    public void init() throws Exception {
-//        if(use_packet_handler) {
+// if(use_packet_handler) {
 //            packet_queue=new Queue();
 //            packet_handler=new PacketHandler();
-//        }
+// }
 //    }
 //
 //
@@ -272,17 +272,17 @@
 //     * Creates the unicast and multicast sockets and starts the unicast and multicast receiver threads
 //     */
 //    public void start() throws Exception {
-//        if(Trace.trace) Trace.info("UDP.start()", "creating sockets and starting threads");
-//        createSockets();
-//        passUp(new Event(Event.SET_LOCAL_ADDRESS, local_addr));
-//        startThreads();
+// if(Trace.trace) Trace.info("UDP.start()", "creating sockets and starting threads");
+// createSockets();
+// passUp(new Event(Event.SET_LOCAL_ADDRESS, local_addr));
+// startThreads();
 //    }
 //
 //
 //    public void stop() {
-//        if(Trace.trace) Trace.info("UDP.stop()", "closing sockets and stopping threads");
-//        stopThreads();  // will close sockets, closeSockets() is not really needed anymore, but...
-//        closeSockets(); // ... we'll leave it in there for now (doesn't do anything if already closed)
+// if(Trace.trace) Trace.info("UDP.stop()", "closing sockets and stopping threads");
+// stopThreads();  // will close sockets, closeSockets() is not really needed anymore, but...
+// closeSockets(); // ... we'll leave it in there for now (doesn't do anything if already closed)
 //    }
 //
 //
@@ -299,10 +299,10 @@
 //     *
 //     */
 //    public boolean setProperties(Properties props) {
-//        String str;
+// String str;
 //
-//        str=props.getProperty("bind_addr");
-//        if(str != null) {
+// str=props.getProperty("bind_addr");
+// if(str != null) {
 //            try {
 //                bind_addr=InetAddress.getByName(str);
 //            }
@@ -311,92 +311,92 @@
 //                return false;
 //            }
 //            props.remove("bind_addr");
-//        }
+// }
 //
-//        str=props.getProperty("bind_port");
-//        if(str != null) {
+// str=props.getProperty("bind_port");
+// if(str != null) {
 //            bind_port=new Integer(str).intValue();
 //            props.remove("bind_port");
-//        }
+// }
 //
 //		str=props.getProperty("start_port");
-//        if(str != null) {
+// if(str != null) {
 //            bind_port=new Integer(str).intValue();
 //            props.remove("start_port");
-//        }
+// }
 //
 //		str=props.getProperty("port_range");
-//        if(str != null) {
+// if(str != null) {
 //            port_range=new Integer(str).intValue();
 //            props.remove("port_range");
-//        }
+// }
 //
-//        str=props.getProperty("mcast_addr");
-//        if(str != null) {
+// str=props.getProperty("mcast_addr");
+// if(str != null) {
 //            mcast_addr_name=new String(str);
 //            props.remove("mcast_addr");
-//        }
+// }
 //
-//        str=props.getProperty("mcast_port");
-//        if(str != null) {
+// str=props.getProperty("mcast_port");
+// if(str != null) {
 //            mcast_port=new Integer(str).intValue();
 //            props.remove("mcast_port");
-//        }
+// }
 //
-//        str=props.getProperty("ip_mcast");
-//        if(str != null) {
+// str=props.getProperty("ip_mcast");
+// if(str != null) {
 //            ip_mcast=new Boolean(str).booleanValue();
 //            props.remove("ip_mcast");
-//        }
+// }
 //
-//        str=props.getProperty("ip_ttl");
-//        if(str != null) {
+// str=props.getProperty("ip_ttl");
+// if(str != null) {
 //            ip_ttl=new Integer(str).intValue();
 //            props.remove("ip_ttl");
-//        }
+// }
 //
-//        str=props.getProperty("mcast_send_buf_size");
-//        if(str != null) {
+// str=props.getProperty("mcast_send_buf_size");
+// if(str != null) {
 //            mcast_send_buf_size=Integer.parseInt(str);
 //            props.remove("mcast_send_buf_size");
-//        }
+// }
 //
-//        str=props.getProperty("mcast_recv_buf_size");
-//        if(str != null) {
+// str=props.getProperty("mcast_recv_buf_size");
+// if(str != null) {
 //            mcast_recv_buf_size=Integer.parseInt(str);
 //            props.remove("mcast_recv_buf_size");
-//        }
+// }
 //
-//        str=props.getProperty("ucast_send_buf_size");
-//        if(str != null) {
+// str=props.getProperty("ucast_send_buf_size");
+// if(str != null) {
 //            ucast_send_buf_size=Integer.parseInt(str);
 //            props.remove("ucast_send_buf_size");
-//        }
+// }
 //
-//        str=props.getProperty("ucast_recv_buf_size");
-//        if(str != null) {
+// str=props.getProperty("ucast_recv_buf_size");
+// if(str != null) {
 //            ucast_recv_buf_size=Integer.parseInt(str);
 //            props.remove("ucast_recv_buf_size");
-//        }
+// }
 //
-//        str=props.getProperty("loopback");
-//        if(str != null) {
+// str=props.getProperty("loopback");
+// if(str != null) {
 //            loopback=new Boolean(str).booleanValue();
 //            props.remove("loopback");
-//        }
+// }
 //
-//        str=props.getProperty("use_packet_handler");
-//        if(str != null) {
+// str=props.getProperty("use_packet_handler");
+// if(str != null) {
 //            use_packet_handler=new Boolean(str).booleanValue();
 //            props.remove("use_packet_handler");
-//        }
+// }
 //
-//        if(props.size() > 0) {
+// if(props.size() > 0) {
 //            System.err.println("UDP.setProperties(): the following properties are not recognized:");
 //            props.list(System.out);
 //            return false;
-//        }
-//        return true;
+// }
+// return true;
 //    }
 //
 //
@@ -405,7 +405,7 @@
 //     * messages are received from the network rather than from a layer below.
 //     */
 //    public void startUpHandler() {
-//        ;
+// ;
 //    }
 //
 //    /**
@@ -413,18 +413,18 @@
 //     * @param evt - the event being send from the stack
 //     */
 //    public void up(Event evt) {
-//        passUp(evt);
+// passUp(evt);
 //
-//        switch(evt.getType()) {
+// switch(evt.getType()) {
 //
 //            case Event.CONFIG:
 //                passUp(evt);
 //                if(Trace.trace) Trace.info("UDP.up()", "received CONFIG event: " + evt.getArg());
 //                handleConfigEvent((HashMap)evt.getArg());
 //                return;
-//        }
+// }
 //
-//        passUp(evt);
+// passUp(evt);
 //    }
 //
 //    /**
@@ -434,29 +434,29 @@
 //     * modified Message to the send queue of the layer below it, by calling Down).
 //     */
 //    public void down(Event evt) {
-//        Message msg;
-//        Object dest_addr;
+// Message msg;
+// Object dest_addr;
 //
-//        if(evt.getType() != Event.MSG) {  // unless it is a message handle it and respond
+// if(evt.getType() != Event.MSG) {  // unless it is a message handle it and respond
 //            handleDownEvent(evt);
 //            return;
-//        }
+// }
 //
-//        msg=(Message)evt.getArg();
+// msg=(Message)evt.getArg();
 //
-//        if(udp_hdr != null && udp_hdr.group_addr != null) {
+// if(udp_hdr != null && udp_hdr.group_addr != null) {
 //            // added patch by Roland Kurmann (March 20 2003)
 //            msg.putHeader(name, udp_hdr);
-//        }
+// }
 //
-//        dest_addr=msg.getDest();
+// dest_addr=msg.getDest();
 //
-//        // Because we don't call Protocol.passDown(), we notify the observer directly (e.g. PerfObserver).
-//        // This way, we still have performance numbers for UDP
-//        if(observer != null)
+// // Because we don't call Protocol.passDown(), we notify the observer directly (e.g. PerfObserver).
+// // This way, we still have performance numbers for UDP
+// if(observer != null)
 //            observer.passDown(evt);
 //
-//        if(dest_addr == null) { // 'null' means send to all group members
+// if(dest_addr == null) { // 'null' means send to all group members
 //            if(ip_mcast) {
 //                if(mcast_addr == null) {
 //                    Trace.error("UDP.down()", "dest address of message is null, and " +
@@ -472,14 +472,14 @@
 //                sendMultipleUdpMessages(msg, members);
 //                return;
 //            }
-//        }
+// }
 //
-//        try {
+// try {
 //            sendUdpMessage(msg);
-//        }
-//        catch(Exception e) {
+// }
+// catch(Exception e) {
 //            Trace.error("UDP.down()", "exception=" + e + ", msg=" + msg + ", mcast_addr=" + mcast_addr);
-//        }
+// }
 //    }
 //
 //
@@ -501,7 +501,7 @@
 //     * have to return all unstable messages with the FLUSH_OK response.
 //     */
 //    void setSourceAddress(Message msg) {
-//        if(msg.getSrc() == null)
+// if(msg.getSrc() == null)
 //            msg.setSrc(local_addr);
 //    }
 //
@@ -513,13 +513,13 @@
 //     * mcast or unicast socket reads can be concurrent
 //     */
 //    void handleIncomingUdpPacket(byte[] data) {
-//        ByteArrayInputStream inp_stream;
-//        ObjectInputStream    inp;
-//        Message              msg=null;
-//        UdpHeader            hdr=null;
-//        Event                evt;
+// ByteArrayInputStream inp_stream;
+// ObjectInputStream    inp;
+// Message              msg=null;
+// UdpHeader            hdr=null;
+// Event                evt;
 //
-//        try {
+// try {
 //            // skip the first n bytes (default: 4), this is the version info
 //            inp_stream=new ByteArrayInputStream(data, VERSION_LENGTH, data.length - VERSION_LENGTH);
 //            inp=new ObjectInputStream(inp_stream);
@@ -549,13 +549,13 @@
 //                observer.up(evt, up_queue.size());
 //
 //            hdr=(UdpHeader)msg.removeHeader(name);
-//        }
-//        catch(Throwable e) {
+// }
+// catch(Throwable e) {
 //            Trace.error("UDP.handleIncomingUdpPacket()", "exception=" + Trace.getStackTrace(e));
 //            return;
-//        }
+// }
 //
-//        if(hdr != null) {
+// if(hdr != null) {
 //
 //            /* Discard all messages destined for a channel with a different name */
 //            String ch_name=null;
@@ -572,33 +572,33 @@
 //                                                                ch_name + "). Sender was " + msg.getSrc());
 //                return;
 //            }
-//        }
+// }
 //
-//        passUp(evt);
+// passUp(evt);
 //    }
 //
 //
 //    /** Send a message to the address specified in dest */
 //    void sendUdpMessage(Message msg) throws Exception {
-//        IpAddress           dest;
-//        ObjectOutputStream  out;
-//        byte                buf[];
-//        DatagramPacket      packet;
-//        Message             copy;
-//        Event               evt;
+// IpAddress           dest;
+// ObjectOutputStream  out;
+// byte                buf[];
+// DatagramPacket      packet;
+// Message             copy;
+// Event               evt;
 //
-//        dest=(IpAddress)msg.getDest();  // guaranteed not to be null
-//        setSourceAddress(msg);
+// dest=(IpAddress)msg.getDest();  // guaranteed not to be null
+// setSourceAddress(msg);
 //
-//        if(Trace.debug)
+// if(Trace.debug)
 //            Trace.debug("UDP.sendUdpMessage()",
 //                        "sending message to " + msg.getDest() +
 //                        " (src=" + msg.getSrc() + "), headers are " + msg.getHeaders());
 //
-//        // Don't send if destination is local address. Instead, switch dst and src and put in up_queue.
-//        // If multicast message, loopback a copy directly to us (but still multicast). Once we receive this,
-//        // we will discard our own multicast message
-//        if(loopback && (dest.equals(local_addr) || dest.isMulticastAddress())) {
+// // Don't send if destination is local address. Instead, switch dst and src and put in up_queue.
+// // If multicast message, loopback a copy directly to us (but still multicast). Once we receive this,
+// // we will discard our own multicast message
+// if(loopback && (dest.equals(local_addr) || dest.isMulticastAddress())) {
 //            copy=msg.copy();
 //            copy.removeHeader(name);
 //            copy.setSrc(local_addr);
@@ -613,25 +613,25 @@
 //            passUp(evt);
 //            if(!dest.isMulticastAddress())
 //                return;
-//        }
+// }
 //
-//        out_stream.reset();
-//        out_stream.write(Version.version_id, 0, Version.version_id.length); // write the version
-//        out=new ObjectOutputStream(out_stream);
-//        msg.writeExternal(out);
-//        out.flush(); // needed if out buffers its output to out_stream
-//        buf=out_stream.toByteArray();
-//        packet=new DatagramPacket(buf, buf.length, dest.getIpAddress(), dest.getPort());
+// out_stream.reset();
+// out_stream.write(Version.version_id, 0, Version.version_id.length); // write the version
+// out=new ObjectOutputStream(out_stream);
+// msg.writeExternal(out);
+// out.flush(); // needed if out buffers its output to out_stream
+// buf=out_stream.toByteArray();
+// packet=new DatagramPacket(buf, buf.length, dest.getIpAddress(), dest.getPort());
 //
-//        if(dest.getIpAddress().isMulticastAddress()) { // multicast message
+// if(dest.getIpAddress().isMulticastAddress()) { // multicast message
 //            try {
 //                mcast_sock.send(packet);
 //            }
 //            catch(Throwable e) {
 //                Trace.error("UDP.sendUdpMessage()", "exception sending mcast message: " + e);
 //            }
-//        }
-//        else {                                         // unicast message
+// }
+// else {                                         // unicast message
 //            if(send_sock != null) {
 //                try {
 //                    send_sock.send(packet);
@@ -644,14 +644,14 @@
 //                Trace.error("UDP.sendUdpMessage()", "(unicast) send_sock is null. Message is " + msg +
 //                                                    ", headers are " + msg.getHeaders());
 //            }
-//        }
+// }
 //    }
 //
 //
 //    void sendMultipleUdpMessages(Message msg, Vector dests) {
-//        Address dest;
+// Address dest;
 //
-//        for(int i=0; i < dests.size(); i++) {
+// for(int i=0; i < dests.size(); i++) {
 //            dest=(Address)dests.elementAt(i);
 //            msg.setDest(dest);
 //
@@ -661,7 +661,7 @@
 //            catch(Exception e) {
 //                Trace.debug("UDP.sendMultipleUdpMessages()", "exception=" + e);
 //            }
-//        }
+// }
 //    }
 //
 //
@@ -671,47 +671,47 @@
 //     * in the JDK port (see DESIGN).
 //     */
 //    void createSockets() throws Exception {
-//        InetAddress tmp_addr=null;
+// InetAddress tmp_addr=null;
 //
-//        // bind_addr not set, try to assign one by default. This is needed on Windows
-//        // @todo: replace this code in JDK 1.4 with java.net.NetworkInterface API
+// // bind_addr not set, try to assign one by default. This is needed on Windows
+// // @todo: replace this code in JDK 1.4 with java.net.NetworkInterface API
 //
-//        // changed by bela Feb 12 2003: by default multicast sockets will be bound to all network interfaces
+// // changed by bela Feb 12 2003: by default multicast sockets will be bound to all network interfaces
 //
-//        // CHANGED *BACK* by bela March 13 2003: binding to all interfaces did not result in a correct
-//        // local_addr. As a matter of fact, comparison between e.g. 0.0.0.0:1234 (on hostA) and
-//        // 0.0.0.0:1.2.3.4 (on hostB) would fail !
-//        if(bind_addr == null) {
+// // CHANGED *BACK* by bela March 13 2003: binding to all interfaces did not result in a correct
+// // local_addr. As a matter of fact, comparison between e.g. 0.0.0.0:1234 (on hostA) and
+// // 0.0.0.0:1.2.3.4 (on hostB) would fail !
+// if(bind_addr == null) {
 //            InetAddress[] interfaces=InetAddress.getAllByName(InetAddress.getLocalHost().getHostAddress());
 //            if(interfaces != null && interfaces.length > 0)
 //                bind_addr=interfaces[0];
-//        }
-//        if(bind_addr == null)
+// }
+// if(bind_addr == null)
 //            bind_addr=InetAddress.getLocalHost();
 //
-//        if(bind_addr != null && Trace.trace)
+// if(bind_addr != null && Trace.trace)
 //            Trace.info("UDP.createSockets()", "unicast sockets will use interface " +
 //                                              bind_addr.getHostAddress());
 //
 //
-//        // 1. Create socket for sending unicast UDP packets (will use bind_addr
-//        // and bind_port if defined)
+// // 1. Create socket for sending unicast UDP packets (will use bind_addr
+// // and bind_port if defined)
 //
-//        // changed by bela March 27 2003; outgoing socket gets the bind address
-//        // dynamically from the routing table
-//        //send_sock=new DatagramSocket(bind_port, bind_addr);
-//        // Port needs to be chosen dynamically, otherwise if bind_port was used, we would
-//        // conflict with ucast_recv_sock - thanks to Bas Gooren for sending a patch
-//        send_sock=new DatagramSocket(0, bind_addr);
-//        // send_sock=new DatagramSocket();
+// // changed by bela March 27 2003; outgoing socket gets the bind address
+// // dynamically from the routing table
+// //send_sock=new DatagramSocket(bind_port, bind_addr);
+// // Port needs to be chosen dynamically, otherwise if bind_port was used, we would
+// // conflict with ucast_recv_sock - thanks to Bas Gooren for sending a patch
+// send_sock=new DatagramSocket(0, bind_addr);
+// // send_sock=new DatagramSocket();
 //
 //
-//        // 2. Create socket for receiving unicast UDP packets. The address and port
-//        //    of this socket will be our local address (local_addr)
+// // 2. Create socket for receiving unicast UDP packets. The address and port
+// //    of this socket will be our local address (local_addr)
 //
 //		// 27-6-2003 bgooren, find available port in range (start_port, start_port+port_range)
 //		int rcv_port=bind_port, max_port=bind_port+port_range;
-//        while(rcv_port <= max_port) {
+// while(rcv_port <= max_port) {
 //
 //			try {
 //                ucast_recv_sock=new DatagramSocket(rcv_port, bind_addr);
@@ -727,16 +727,16 @@
 //				throw new Exception("UDP.createSockets(): cannot list on any port in range "+
 //                        bind_port+"-"+(bind_port+port_range));
 //			}
-//        }
+// }
 //		//ucast_recv_sock=new DatagramSocket(bind_port, bind_addr);
 //
-//        local_addr=new IpAddress(ucast_recv_sock.getLocalAddress(), ucast_recv_sock.getLocalPort());
-//        if(additional_data != null)
+// local_addr=new IpAddress(ucast_recv_sock.getLocalAddress(), ucast_recv_sock.getLocalPort());
+// if(additional_data != null)
 //            local_addr.setAdditionalData(additional_data);
 //
 //
-//        // 3. Create socket for receiving IP multicast packets
-//        if(ip_mcast) {
+// // 3. Create socket for receiving IP multicast packets
+// if(ip_mcast) {
 //            mcast_sock=new MulticastSocket(mcast_port);
 //            mcast_sock.setTimeToLive(ip_ttl);
 //            if(bind_addr != null)
@@ -744,64 +744,64 @@
 //            tmp_addr=InetAddress.getByName(mcast_addr_name);
 //            mcast_addr=new IpAddress(tmp_addr, mcast_port);
 //            mcast_sock.joinGroup(tmp_addr);
-//        }
+// }
 //
-//        setBufferSizes();
+// setBufferSizes();
 //
-//        if(Trace.trace)
+// if(Trace.trace)
 //            Trace.info("UDP.createSockets()", "socket information:\n" + dumpSocketInfo());
 //    }
 //
 //
 //    String dumpSocketInfo() throws Exception {
-//        StringBuffer sb=new StringBuffer();
-//        sb.append("local_addr=").append(local_addr);
-//        sb.append(", mcast_addr=").append(mcast_addr);
-//        sb.append(", bind_addr=").append(bind_addr);
-//        sb.append(", ttl=").append(ip_ttl);
+// StringBuffer sb=new StringBuffer();
+// sb.append("local_addr=").append(local_addr);
+// sb.append(", mcast_addr=").append(mcast_addr);
+// sb.append(", bind_addr=").append(bind_addr);
+// sb.append(", ttl=").append(ip_ttl);
 //
-//        if(send_sock != null) {
+// if(send_sock != null) {
 //            sb.append("\nsend socket: bound to ");
 //            sb.append(send_sock.getLocalAddress().getHostAddress()).append(":").append(send_sock.getLocalPort());
 //            sb.append(", send buffer size=").append(send_sock.getSendBufferSize());
-//        }
+// }
 //
-//        if(ucast_recv_sock != null) {
+// if(ucast_recv_sock != null) {
 //            sb.append("\nreceive socket: bound to ");
 //            sb.append(ucast_recv_sock.getLocalAddress().getHostAddress()).append(":").append(ucast_recv_sock.getLocalPort());
 //            sb.append(", receive buffer size=").append(ucast_recv_sock.getReceiveBufferSize());
-//        }
+// }
 //
-//        if(mcast_sock != null) {
+// if(mcast_sock != null) {
 //            sb.append("\nmulticast socket: bound to ");
 //            sb.append(mcast_sock.getInterface().getHostAddress()).append(":").append(mcast_sock.getLocalPort());
 //            sb.append(", send buffer size=").append(mcast_sock.getSendBufferSize());
 //            sb.append(", receive buffer size=").append(mcast_sock.getReceiveBufferSize());
-//        }
-//        return sb.toString();
+// }
+// return sb.toString();
 //    }
 //
 //
 //    void setBufferSizes() {
-//        if(send_sock != null) {
+// if(send_sock != null) {
 //            try {
 //                send_sock.setSendBufferSize(ucast_send_buf_size);
 //            }
 //            catch(Throwable ex) {
 //                Trace.warn("UDP.setBufferSizes()", "failed setting ucast_send_buf_size in send_sock: " + ex);
 //            }
-//        }
+// }
 //
-//        if(ucast_recv_sock != null) {
+// if(ucast_recv_sock != null) {
 //            try {
 //                ucast_recv_sock.setReceiveBufferSize(ucast_recv_buf_size);
 //            }
 //            catch(Throwable ex) {
 //                Trace.warn("UDP.setBufferSizes()", "failed setting ucast_recv_buf_size in ucast_recv_sock: " + ex);
 //            }
-//        }
+// }
 //
-//        if(mcast_sock != null) {
+// if(mcast_sock != null) {
 //            try {
 //                mcast_sock.setSendBufferSize(mcast_send_buf_size);
 //            }
@@ -815,7 +815,7 @@
 //            catch(Throwable ex) {
 //                Trace.warn("UDP.setBufferSizes()", "failed setting mcast_recv_buf_size in mcast_sock: " + ex);
 //            }
-//        }
+// }
 //    }
 //
 //
@@ -823,19 +823,19 @@
 //     * Closed UDP unicast and multicast sockets
 //     */
 //    void closeSockets() {
-//        // 1. Close multicast socket
-//        closeMulticastSocket();
+// // 1. Close multicast socket
+// closeMulticastSocket();
 //
-//        // 2. Close unicast receiver socket
-//        closeUnicastReceiverSocket();
+// // 2. Close unicast receiver socket
+// closeUnicastReceiverSocket();
 //
-//        // 3. Close unicast sender socket
-//        closeUnicastSenderSocket();
+// // 3. Close unicast sender socket
+// closeUnicastSenderSocket();
 //    }
 //
 //
 //    void closeMulticastSocket() {
-//        if(mcast_sock != null) {
+// if(mcast_sock != null) {
 //            try {
 //                if(mcast_addr != null) {
 //                    // by sending a dummy packet the thread will be awakened
@@ -850,27 +850,27 @@
 //            catch(IOException ex) {
 //            }
 //            mcast_addr=null;
-//        }
+// }
 //    }
 //
 //
 //    void closeUnicastReceiverSocket() {
-//        if(ucast_recv_sock != null) {
+// if(ucast_recv_sock != null) {
 //            // by sending a dummy packet, the thread will terminate (if it was flagged as stopped before)
 //            sendDummyPacket(ucast_recv_sock.getLocalAddress(), ucast_recv_sock.getLocalPort());
 //
 //            ucast_recv_sock.close();
 //            ucast_recv_sock=null;
 //            if(Trace.trace) Trace.info("UDP.closeMulticastSocket()", "unicast receiver socket closed");
-//        }
+// }
 //    }
 //
 //    void closeUnicastSenderSocket() {
-//        if(send_sock != null) {
+// if(send_sock != null) {
 //            send_sock.close();
 //            send_sock=null;
 //            if(Trace.trace) Trace.info("UDP.closeMulticastSocket()", "unicast sender socket closed");
-//        }
+// }
 //    }
 //
 //
@@ -883,31 +883,31 @@
 //     * @param port The destination port
 //     */
 //    void sendDummyPacket(InetAddress dest, int port) {
-//        DatagramPacket packet;
-//        byte[] buf={0};
+// DatagramPacket packet;
+// byte[] buf={0};
 //
-//        if(dest == null) {
+// if(dest == null) {
 //            try {
 //                dest=InetAddress.getLocalHost();
 //            }
 //            catch(Exception e) {
 //            }
-//        }
+// }
 //
-//        if(Trace.debug) Trace.info("UDP.sendDummyPacket()", "sending packet to " + dest + ":" + port);
+// if(Trace.debug) Trace.info("UDP.sendDummyPacket()", "sending packet to " + dest + ":" + port);
 //
-//        if(send_sock == null || dest == null) {
+// if(send_sock == null || dest == null) {
 //            Trace.warn("UDP.sendDummyPacket()", "send_sock was null or dest was null, cannot send dummy packet");
 //            return;
-//        }
-//        packet=new DatagramPacket(buf, buf.length, dest, port);
-//        try {
+// }
+// packet=new DatagramPacket(buf, buf.length, dest, port);
+// try {
 //            send_sock.send(packet);
-//        }
-//        catch(Throwable e) {
+// }
+// catch(Throwable e) {
 //            Trace.error("UDP.sendDummyPacket()", "exception sending dummy packet to " +
 //                                                 dest + ":" + port + ": " + e);
-//        }
+// }
 //    }
 //
 //
@@ -915,14 +915,14 @@
 //     * Starts the unicast and multicast receiver threads
 //     */
 //    void startThreads() throws Exception {
-//        if(ucast_receiver == null) {
+// if(ucast_receiver == null) {
 //            //start the listener thread of the ucast_recv_sock
 //            ucast_receiver=new UcastReceiver();
 //            ucast_receiver.start();
 //            if(Trace.trace) Trace.info("UDP.startThreads()", "created unicast receiver thread");
-//        }
+// }
 //
-//        if(ip_mcast) {
+// if(ip_mcast) {
 //            if(mcast_receiver != null) {
 //                if(mcast_receiver.isAlive()) {
 //                    if(Trace.trace)
@@ -940,8 +940,8 @@
 //                mcast_receiver.setDaemon(true);
 //                mcast_receiver.start();
 //            }
-//        }
-//        if(use_packet_handler)
+// }
+// if(use_packet_handler)
 //            packet_handler.start();
 //    }
 //
@@ -950,10 +950,10 @@
 //     * Stops unicast and multicast receiver threads
 //     */
 //    void stopThreads() {
-//        Thread tmp;
+// Thread tmp;
 //
-//        // 1. Stop the multicast receiver thread
-//        if(mcast_receiver != null) {
+// // 1. Stop the multicast receiver thread
+// if(mcast_receiver != null) {
 //            if(mcast_receiver.isAlive()) {
 //                tmp=mcast_receiver;
 //                mcast_receiver=null;
@@ -967,22 +967,22 @@
 //                tmp=null;
 //            }
 //            mcast_receiver=null;
-//        }
+// }
 //
-//        // 2. Stop the unicast receiver thread
-//        if(ucast_receiver != null) {
+// // 2. Stop the unicast receiver thread
+// if(ucast_receiver != null) {
 //            ucast_receiver.stop();
 //            ucast_receiver=null;
-//        }
+// }
 //
-//        // 3. Stop the in_packet_handler thread
-//        if(packet_handler != null)
+// // 3. Stop the in_packet_handler thread
+// if(packet_handler != null)
 //            packet_handler.stop();
 //    }
 //
 //
 //    void handleDownEvent(Event evt) {
-//        switch(evt.getType()) {
+// switch(evt.getType()) {
 //
 //            case Event.TMP_VIEW:
 //            case Event.VIEW_CHANGE:
@@ -1015,23 +1015,23 @@
 //                if(Trace.trace) Trace.info("UDP.down()", "received CONFIG event: " + evt.getArg());
 //                handleConfigEvent((HashMap)evt.getArg());
 //                break;
-//        }
+// }
 //    }
 //
 //
 //    void handleConfigEvent(HashMap map) {
-//        if(map == null) return;
-//        if(map.containsKey("additional_data"))
+// if(map == null) return;
+// if(map.containsKey("additional_data"))
 //            additional_data=(byte[])map.get("additional_data");
-//        if(map.containsKey("send_buf_size")) {
+// if(map.containsKey("send_buf_size")) {
 //            mcast_send_buf_size=((Integer)map.get("send_buf_size")).intValue();
 //            ucast_send_buf_size=mcast_send_buf_size;
-//        }
-//        if(map.containsKey("recv_buf_size")) {
+// }
+// if(map.containsKey("recv_buf_size")) {
 //            mcast_recv_buf_size=((Integer)map.get("recv_buf_size")).intValue();
 //            ucast_recv_buf_size=mcast_recv_buf_size;
-//        }
-//        setBufferSizes();
+// }
+// setBufferSizes();
 //    }
 //
 //
@@ -1039,21 +1039,21 @@
 //
 //    /* ----------------------------- Inner Classes ---------------------------------------- */
 //    public class UcastReceiver implements Runnable {
-//        boolean running=true;
-//        Thread thread=null;
+// boolean running=true;
+// Thread thread=null;
 //
 //
-//        public void start() {
+// public void start() {
 //            if(thread == null) {
 //                thread=new Thread(this, "UDP.UcastReceiverThread");
 //                thread.setDaemon(true);
 //                running=true;
 //                thread.start();
 //            }
-//        }
+// }
 //
 //
-//        public void stop() {
+// public void stop() {
 //            Thread tmp;
 //            if(thread != null && thread.isAlive()) {
 //                running=false;
@@ -1064,10 +1064,10 @@
 //                tmp=null;
 //            }
 //            thread=null;
-//        }
+// }
 //
 //
-//        public void run() {
+// public void run() {
 //            DatagramPacket  packet;
 //            byte            receive_buf[]=new byte[65535];
 //            int             len;
@@ -1129,7 +1129,7 @@
 //                }
 //            }
 //            if(Trace.trace) Trace.info("UDP.UcastReceiver.run()", "unicast receiver thread terminated");
-//        }
+// }
 //    }
 //
 //
@@ -1138,9 +1138,9 @@
 //     * to the higher layer (done in handleIncomingUdpPacket()).
 //     */
 //    class PacketHandler implements Runnable {
-//        Thread t=null;
+// Thread t=null;
 //
-//        public void run() {
+// public void run() {
 //            byte[] data;
 //            while(packet_queue != null && packet_handler != null) {
 //                try {
@@ -1153,22 +1153,22 @@
 //                handleIncomingUdpPacket(data);
 //                data=null; // let's give the poor garbage collector a hand...
 //            }
-//        }
+// }
 //
-//        void start() {
+// void start() {
 //            if(t == null) {
 //                t=new Thread(this, "UDP.PacketHandler thread");
 //                t.setDaemon(true);
 //                t.start();
 //            }
-//        }
+// }
 //
-//        void stop() {
+// void stop() {
 //            if(packet_queue != null)
 //                packet_queue.close(false); // should terminate the packet_handler thread too
 //            t=null;
 //            packet_queue=null;
-//        }
+// }
 //    }
 //
 //

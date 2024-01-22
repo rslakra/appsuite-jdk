@@ -31,7 +31,7 @@
 package com.devamatre.appsuite.jdk.reflection;
 
 import com.devamatre.appsuite.core.BeanUtils;
-import com.devamatre.appsuite.jdk.bos.Name;
+import com.devamatre.appsuite.bos.Name;
 import com.devamatre.appsuite.jdk8.Person;
 
 import java.lang.reflect.Field;

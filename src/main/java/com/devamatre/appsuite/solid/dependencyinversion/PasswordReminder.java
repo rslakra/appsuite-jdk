@@ -11,7 +11,7 @@ public class PasswordReminder {
 //    private MySqlConnection connection;
 
 //    public PasswordReminder(MySqlConnection connection) {
-//        this.connection = connection;
+// this.connection = connection;
 //    }
 
     public PasswordReminder(Connection connection) {

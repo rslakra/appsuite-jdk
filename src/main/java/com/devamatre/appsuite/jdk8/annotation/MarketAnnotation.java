@@ -36,7 +36,7 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * An annotation that has no method, is called marker annotation.
  * <p>
- * The @Override and @Deprecated are marker annotations.
+ * The @Override and @Deprecated are marker annotation.
  *
  * @author Rohtash Lakra
  */

@@ -47,7 +47,7 @@ public class TestLogger {
      */
     public static void main(String[] args) {
         // LogManager.configure(System.getProperty("user.dir"));
-//        LogManager.configure(LogManager.getDefaultConfigPath(false) + File.separator + LogManager.LOG4J_PROPERTY_FILE);
+// LogManager.configure(LogManager.getDefaultConfigPath(false) + File.separator + LogManager.LOG4J_PROPERTY_FILE);
 
         Logger logger = LoggerFactory.getLogger(TestLogger.class);
         logger.info("Logger Initialized.");

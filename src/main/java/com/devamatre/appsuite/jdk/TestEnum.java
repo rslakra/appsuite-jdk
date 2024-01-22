@@ -30,10 +30,10 @@
 //
 //public class TestEnum {
 //    public static void main(String[] args) {
-//        System.out.println("Testing Enum");
-//        Gender gender = Gender.MALE;
-//        System.out.println("Gender : " + gender.getValue());
-//        gender = Gender.FEMALE;
-//        System.out.println("Gender : " + gender.getValue());
+// System.out.println("Testing Enum");
+// Gender gender = Gender.MALE;
+// System.out.println("Gender : " + gender.getValue());
+// gender = Gender.FEMALE;
+// System.out.println("Gender : " + gender.getValue());
 //    }
 //}

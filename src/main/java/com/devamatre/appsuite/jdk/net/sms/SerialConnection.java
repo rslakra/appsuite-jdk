@@ -308,9 +308,9 @@
 //	}
 //
 //	/**
-//	 * Handles ownership events. If a PORT_OWNERSHIP_REQUESTED event is received
+//	 * Handles ownership event. If a PORT_OWNERSHIP_REQUESTED event is received
 //	 * a dialog box is created asking the user if they are willing to give up
-//	 * the port. No action is taken on other types of ownership events.
+//	 * the port. No action is taken on other types of ownership event.
 //	 */
 //	public void ownershipChange(int type) {
 //		/*

@@ -55,8 +55,8 @@ public class JavaFileFilter implements FileFilter {
      * @param args
      */
     public static void main(String[] args) {
-//        LogManager.configure(LogManager.LOG4J_PROPERTY_FILE);
-//        String pathString = CoreUtility.pathString(JavaFileFilter.class);
+// LogManager.configure(LogManager.LOG4J_PROPERTY_FILE);
+// String pathString = CoreUtility.pathString(JavaFileFilter.class);
         String pathString = IOUtils.pathString(IOUtils.getUserDir(), "java/src/main/java/com/rslakra/jdk8/lambda");
         LOGGER.debug("pathString:" + pathString);
         JavaFileFilter fileFilter = new JavaFileFilter();

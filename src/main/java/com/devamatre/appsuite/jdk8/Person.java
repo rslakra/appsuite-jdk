@@ -34,8 +34,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2018-01-26 07:42:55 AM
  * @since 1.0.0

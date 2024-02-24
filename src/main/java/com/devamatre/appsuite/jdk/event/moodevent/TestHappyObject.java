@@ -37,7 +37,7 @@ package com.devamatre.appsuite.jdk.event.moodevent;
  * Put it all together We now have a custom event, a custom event listener interface, an event generator, and some
  * listeners. Let's put it all together:
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 4, 2006
  */
 

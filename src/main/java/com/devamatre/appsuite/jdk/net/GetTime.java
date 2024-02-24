@@ -36,8 +36,8 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com) Created on Aug 9, 2009
+ * @author Rohtash Lakra
+ * @created Aug 9, 2009
  * @version 1.0.0
  * @since 1.0.0
  */

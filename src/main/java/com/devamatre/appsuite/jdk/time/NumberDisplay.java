@@ -37,7 +37,7 @@ package com.devamatre.appsuite.jdk.time;
  * (inclusive) to limit-1. It can be incremented, and when the value reaches
  * that limit, it rolls around back to zero.
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 01/12/2012 (dd/mm/yyyy)
  * @since 1.0.0

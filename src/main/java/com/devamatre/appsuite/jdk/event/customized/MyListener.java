@@ -36,7 +36,7 @@ import java.util.EventListener;
  * This <class>MyListener</class> class declares the listener class. It must extend EventListener. A class must
  * implement this interface to get MyEvents.
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 3, 2006
  */
 public interface MyListener extends EventListener {

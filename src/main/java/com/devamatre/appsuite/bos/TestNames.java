@@ -32,7 +32,6 @@ package com.devamatre.appsuite.bos;
 
 /**
  * @author Rohtash Lakra
-* @author Rohtash Lakra (rohtash.singh@gmail.com)
  * @version 1.0.0
  * @created 2018-02-10 01:21:50 PM
  * @since 1.0.0

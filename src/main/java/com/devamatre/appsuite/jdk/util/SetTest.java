@@ -1,6 +1,6 @@
 /******************************************************************************
  * Copyright (C) Devamatre Inc 2009-2018. All rights reserved.
- * 
+ *
  * This code is licensed to Devamatre under one or more contributor license 
  * agreements. The reproduction, transmission or use of this code, in source 
  * and binary forms, with or without modification, are permitted provided 
@@ -24,50 +24,55 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
- *      
+ *
  * Devamatre reserves the right to modify the technical specifications and or 
  * features without any prior notice.
  *****************************************************************************/
 package com.devamatre.appsuite.jdk.util;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
- * 
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
-* @author Rohtash Lakra (rohtash.singh@gmail.com)
- * @created 2018-02-10 01:22:09 PM
+ * @author Rohtash Lakra
  * @version 1.0.0
+ * @created 2018-02-10 01:21:10 PM
  * @since 1.0.0
  */
-public class MapExample {
-	/**
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		String[] str = { "one", "two", "five", "four", "three" };
-		Map map = new HashMap();
-		for (int i = 0, n = str.length; i < n; i++) {
-			String key = str[i];
-			int value = -1;
-			if (key.equals("one")) {
-				value = 1;
-			} else if (key.equals("two")) {
-				value = 2;
-			} else if (key.equals("three")) {
-				value = 3;
-			} else if (key.equals("four")) {
-				value = 4;
-			} else if (key.equals("five")) {
-				value = 5;
-			}
-			map.put(key, new IntVal(value));
-		}
-		System.out.println(map);
-		Map sortedMap = new TreeMap(map);
-		System.out.println(sortedMap);
-	}
+public class SetTest {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(SetTest.class);
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        Set<String> hashSet = new HashSet();
+        hashSet.add("Bernadine");
+        hashSet.add("Elizabeth");
+        hashSet.add("Gene");
+        hashSet.add("Elizabeth");
+        hashSet.add("Clara");
+        LOGGER.debug("hashSet:{}", hashSet);
+        System.out.println();
+        LOGGER.debug("get first element:{}", hashSet.iterator().next());
+
+        Set treeSet = new TreeSet(hashSet);
+        LOGGER.debug("treeSet:{}", treeSet);
+        System.out.println();
+
+        Set treeSetReversed = new TreeSet(Collections.reverseOrder());
+        treeSetReversed.add("Bernadine");
+        treeSetReversed.add("Elizabeth");
+        treeSetReversed.add("Gene");
+        treeSetReversed.add("Elizabeth");
+        treeSetReversed.add("Clara");
+        LOGGER.debug("treeSetReversed:{}", treeSetReversed);
+        System.out.println();
+    }
 }

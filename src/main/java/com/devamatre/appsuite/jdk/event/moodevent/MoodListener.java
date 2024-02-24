@@ -35,7 +35,7 @@ package com.devamatre.appsuite.jdk.event.moodevent;
  * <p>
  * we need a listener interface so HappyObject can inform others of his mood:
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 4, 2006
  */
 

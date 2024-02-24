@@ -36,7 +36,7 @@ import java.util.EventObject;
  * This <class>MoodEvent</class> class holds on to the source, as well as one of the Mood constants. When a listener
  * receives the event, it can retrieve the mood by calling the getMood() method.
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 4, 2006
  */
 public class MoodEvent extends EventObject {

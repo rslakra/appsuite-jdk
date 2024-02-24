@@ -39,8 +39,7 @@ import java.net.InetAddress;
 import java.util.Date;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
-* @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2009-08-09 05:19:07 PM
  * @since 1.0.0

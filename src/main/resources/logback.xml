@@ -13,13 +13,15 @@
     </root>
 
     <!-- slf4j -->
-    <logger name="ch.qos.logback.core.joran" level="WARN"/>
+    <logger name="ch.qos.logback" level="WARN"/>
+    <!--<logger name="ch.qos.logback.core.joran" level="WARN"/>-->
+
     <!-- rslakra -->
     <logger name="com.devamatre" level="DEBUG"/>
 
     <!-- zaxxer -->
     <logger name="com.zaxxer" level="WARN"/>
-        <!-- apache -->
+    <!-- apache -->
     <logger name="org.apache" level="WARN"/>
 
     <logger name="org.apache.tomcat" level="WARN"/>

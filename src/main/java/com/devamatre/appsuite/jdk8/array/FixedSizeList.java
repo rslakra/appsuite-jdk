@@ -1,4 +1,4 @@
-package com.devamatre.appsuite.jdk8;
+package com.devamatre.appsuite.jdk8.array;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,10 +10,19 @@ import java.util.List;
 public class FixedSizeList {
 
     /**
+     * @param size
+     * @return
+     */
+    public List<String> fixedSizeList(int size) {
+        return Arrays.asList(new String[size]);
+    }
+
+    /**
      * @param args
      */
     public static void main(String[] args) {
-        List<String> names = Arrays.asList(new String[3]);
+        FixedSizeList instance = new FixedSizeList();
+        List<String> names = instance.fixedSizeList(3);
         names.set(0, "Rohtash");
         names.set(1, "Singh");
         names.set(2, "Lakra");

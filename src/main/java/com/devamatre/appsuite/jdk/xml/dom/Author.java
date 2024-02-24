@@ -31,7 +31,7 @@
 package com.devamatre.appsuite.jdk.xml.dom;
 
 /**
- * @author Rohtash Singh (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  */
 public class Author {
     private String firstName;

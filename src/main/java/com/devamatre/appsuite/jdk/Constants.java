@@ -35,7 +35,7 @@ package com.devamatre.appsuite.jdk;
  * <p>
  * The <code>Constants</code> TODO Define Purpose here
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @date Aug 01, 2010 12:42:11 PM
  */
 public interface Constants {

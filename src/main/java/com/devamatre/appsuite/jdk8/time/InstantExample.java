@@ -47,8 +47,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2018-02-10 09:59:52 AM
  * @since 1.0.0

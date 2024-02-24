@@ -29,6 +29,26 @@ Run the program with the following command
 * [Java](https://www.java.com/en/download/mac_download.jsp) - The Java Download Location
 * [Maven](https://maven.apache.org/) - Dependency Management
 
+
+## Namespace Details
+
+---
+
+| Namespace   | Details                                                                 |
+|:------------|:------------------------------------------------------------------------|
+| dataobjects | common serializable data objects                                        |
+| events      | common event types                                                      |
+| io          | the common I/O features                                                 |
+| js          | common JavaScript features                                              |
+| lang        | basic language functionalities                                          |
+| net         | networking operations and features                                      |
+| security    | key security features like key generation encryption and decryption etc |
+| sql         | Java Database Connectivity to access databases                          |
+| widgets     | hierarchy of packages for platform-indepeendent GUI components          |
+| utils       | common utility classes                                                  |
+| xml         | common XML parsers and handles                                          |
+| namespace   | details                                                                 |
+
 ## Authors
 
 ---

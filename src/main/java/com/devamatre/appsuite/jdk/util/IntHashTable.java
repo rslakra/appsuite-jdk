@@ -336,7 +336,7 @@ public class IntHashTable extends Dictionary implements Cloneable {
  * <p>
  * The <code>IntHashTableEntry</code> TODO Define Purpose here
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @date Aug 10, 2009 11:19:33 PM
  */
 final class IntHashTableEntry {
@@ -416,7 +416,7 @@ final class IntHashTableEntry {
  * <p>
  * The <code>IntHashTableEnumerator</code> TODO Define Purpose here
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @date Aug 10, 2009 11:20:34 PM
  */
 class IntHashTableEnumerator implements Enumeration {

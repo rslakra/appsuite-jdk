@@ -37,8 +37,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2009-08-10 02:13:23 PM
  * @since 1.0.0

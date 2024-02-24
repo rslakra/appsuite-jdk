@@ -33,7 +33,7 @@ package com.devamatre.appsuite.jdk.event.moodevent;
 /**
  * This <class>Birds</class> class which responds to HappyObject's mood.
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 4, 2006
  */
 

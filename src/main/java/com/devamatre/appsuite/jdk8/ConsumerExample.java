@@ -35,8 +35,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2018-01-24 08:04:37 AM
  * @since 1.0.0

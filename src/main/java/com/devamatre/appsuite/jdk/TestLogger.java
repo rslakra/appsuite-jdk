@@ -34,9 +34,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
-* @author Rohtash Lakra (rohtash.singh@gmail.com) Created on August 01,
- * 2009
+ * @author Rohtash Lakra
+ * @created August 01, 2009
  * @version 1.0.0
  * @since 1.0.0
  */
@@ -47,7 +46,7 @@ public class TestLogger {
      */
     public static void main(String[] args) {
         // LogManager.configure(System.getProperty("user.dir"));
-// LogManager.configure(LogManager.getDefaultConfigPath(false) + File.separator + LogManager.LOG4J_PROPERTY_FILE);
+        // LogManager.configure(LogManager.getDefaultConfigPath(false) + File.separator + LogManager.LOG4J_PROPERTY_FILE);
 
         Logger logger = LoggerFactory.getLogger(TestLogger.class);
         logger.info("Logger Initialized.");

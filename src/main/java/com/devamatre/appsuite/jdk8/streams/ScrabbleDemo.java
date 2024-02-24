@@ -19,7 +19,7 @@ import java.util.function.Function;
  * 10 points: Q ×2, Z ×2.
  * </pre>
  *
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @Created Mar 6, 2019 11:49:02 AM
  */

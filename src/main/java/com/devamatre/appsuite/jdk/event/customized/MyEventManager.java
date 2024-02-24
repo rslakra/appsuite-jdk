@@ -35,7 +35,7 @@ import javax.swing.event.EventListenerList;
 /**
  * This <class>MyEventManager</class> class manages the event registration and notification code to a class.
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 3, 2006
  */
 public final class MyEventManager {

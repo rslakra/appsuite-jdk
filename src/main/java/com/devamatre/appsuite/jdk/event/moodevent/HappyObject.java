@@ -41,7 +41,7 @@ import java.util.List;
  * Instead of calling a method, we'll register listeners with HappyObject. Whenever he changes his mood, HappyObject
  * will send an event to his listeners.
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 4, 2006
  */
 public class HappyObject {

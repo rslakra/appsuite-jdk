@@ -37,8 +37,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
-* @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2018-02-21 08:20:38 PM
  * @since 1.0.0

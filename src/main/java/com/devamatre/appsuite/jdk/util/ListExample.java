@@ -39,8 +39,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2017-09-23 10:30:16 AM
  * @since 1.0.0

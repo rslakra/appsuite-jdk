@@ -36,7 +36,7 @@ import java.util.EventObject;
 /**
  * This <class>MyEvent</class> class
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 3, 2006
  */
 

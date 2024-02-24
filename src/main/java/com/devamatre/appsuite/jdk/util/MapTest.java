@@ -28,74 +28,73 @@
  * Devamatre reserves the right to modify the technical specifications and or 
  * features without any prior notice.
  *****************************************************************************/
-package com.devamatre.appsuite.jdk;
+package com.devamatre.appsuite.jdk.util;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @author Rohtash Lakra
- * @created Aug 9, 2009
  * @version 1.0.0
+ * @created 2018-02-10 01:22:09 PM
  * @since 1.0.0
  */
-public class TestTimer {
-    private Timer timer;
+public class MapTest {
 
-    public TestTimer(int seconds) {
-        timer = new Timer();
-        timer.schedule(new UpdateTask(), seconds * 1000);
-    }
-
-    class UpdateTask extends TimerTask {
-        public void run() {
-            System.out.println("OK, It's time to do something!");
-            timer.cancel(); // Terminate the thread
-        }
-    }
+    private static final Logger LOGGER = LoggerFactory.getLogger(MapTest.class);
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("Schedule something to do in 5 seconds.");
-        new TestTimer(5);
-        System.out.println("Waiting.");
-
-        DateFormat formatter = new SimpleDateFormat("yyyy/mm/dd");
-        Calendar c = Calendar.getInstance();
-        // c.set(Calendar.HOUR, 24);
-        c.set(Calendar.HOUR_OF_DAY, 15);
-        c.set(Calendar.MINUTE, 41);
-        c.set(Calendar.SECOND, 00);
-
-        Date timeToRun = c.getTime();
-        System.out.println("timeToRun=" + timeToRun);
-
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            public void run() {
-                System.out.println(System.currentTimeMillis());
+        Map<String, IntVal> hashMap = new HashMap();
+        String[] inputData = {"one", "two", "five", "four", "three"};
+        LOGGER.debug("inputData:{}", Arrays.toString(inputData));
+        for (int i = 0, n = inputData.length; i < n; i++) {
+            IntVal intVal = null;
+            switch (inputData[i]) {
+                case "one":
+                    intVal = new IntVal(1);
+                    break;
+                case "two":
+                    intVal = new IntVal(2);
+                    break;
+                case "three":
+                    intVal = new IntVal(3);
+                    break;
+                case "four":
+                    intVal = new IntVal(4);
+                    break;
+                case "five":
+                    intVal = new IntVal(5);
+                    break;
             }
-        }, 1000);
+            hashMap.put(inputData[i], intVal);
+        }
 
-        c.set(Calendar.HOUR_OF_DAY, 14);
-        c.set(Calendar.MINUTE, 41);
-        c.set(Calendar.SECOND, 00);
+        LOGGER.debug("hashMap:{}", hashMap);
+        System.out.println();
 
-        Date timeToRuns = c.getTime();
-        System.out.println("timeToRuns=" + timeToRun);
+        String key = "three";
+        LOGGER.debug("Remove Key:{}, result:{}", key, hashMap.remove(key));
+        System.out.println();
 
-        timer.schedule(new TimerTask() {
-            public void run() {
-                System.out.println("timeToRuns");
-                System.out.println(System.currentTimeMillis());
-            }
-        }, timeToRuns);
+        // map values to array
+        IntVal[] intValues = hashMap.values().toArray(new IntVal[hashMap.size()]);
+        LOGGER.debug("intValues:{}", Arrays.toString(intValues));
+        System.out.println();
 
+        for (Map.Entry<String, IntVal> entry : hashMap.entrySet()) {
+            LOGGER.debug("key:{}, value:{}", entry.getKey(), entry.getValue());
+        }
+
+        // TreeMap
+        Map treeMap = new TreeMap(hashMap);
+        LOGGER.debug("treeMap:{}", treeMap);
     }
 }

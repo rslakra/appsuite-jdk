@@ -34,7 +34,7 @@ import java.io.DataInputStream;
 import java.io.IOException;
 
 /**
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @Created Apr 10, 2019 1:04:32 PM
  */

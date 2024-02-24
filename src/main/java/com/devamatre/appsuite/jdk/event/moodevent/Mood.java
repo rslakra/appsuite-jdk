@@ -34,7 +34,7 @@ package com.devamatre.appsuite.jdk.event.moodevent;
  * This <class>Mood</class> class has three moods : Happy, Annoyed and Angry. When he fires an event, the listener will
  * retrieve a mood.
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 4, 2006
  */
 

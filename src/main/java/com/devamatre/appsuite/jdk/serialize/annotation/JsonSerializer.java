@@ -78,7 +78,7 @@ public final class JsonSerializer {
      * @return
      * @throws Exception
      */
-    private final String toJSONString(final Object object) throws Exception {
+    private String toJSONString(final Object object) throws Exception {
         Class<?> objClass = object.getClass();
         Map<String, String> jsonElements = new HashMap<>();
         for (Field field : objClass.getDeclaredFields()) {

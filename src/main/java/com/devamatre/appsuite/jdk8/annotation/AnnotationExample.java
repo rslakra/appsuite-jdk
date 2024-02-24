@@ -59,15 +59,23 @@ public class AnnotationExample {
      */
     @TestCase(value = 3, expected = true)
     @TestCase(value = 4, expected = false)
+    @TestCase(value = 6)
     public boolean isOdd(Integer value) {
         return !isEven(value);
+    }
+
+    /**
+     *
+     */
+    @MarketAnnotation()
+    public void isMarket() {
+        System.out.println("MarketAnnotation");
     }
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-
         AnnotationExample aExample = new AnnotationExample();
 
         try {

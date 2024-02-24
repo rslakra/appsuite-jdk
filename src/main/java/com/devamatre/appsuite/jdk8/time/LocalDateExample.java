@@ -36,8 +36,7 @@ import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2018-02-10 10:03:49 AM
  * @since 1.0.0

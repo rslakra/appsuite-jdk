@@ -36,7 +36,7 @@ import java.util.Locale;
 /**
  * This <class>ListAllAvailableLocale</class> class
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 3, 2006
  */
 

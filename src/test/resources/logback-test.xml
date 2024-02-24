@@ -14,7 +14,9 @@
 
 
     <!-- slf4j -->
-    <logger name="ch.qos.logback.core.joran" level="WARN"/>
+    <logger name="ch.qos.logback" level="WARN"/>
+
+    <!--<logger name="ch.qos.logback.core.joran" level="WARN"/>-->
 
     <!-- rslakra -->
     <logger name="com.devamatre" level="DEBUG"/>

@@ -40,7 +40,7 @@ import java.util.Observer;
  * // Declare the model class MyModel extends Observable { // The setChanged() protected method must overridden to make
  * it public synchronized void setChanged() { super.setChanged(); } }
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 3, 2006
  */
 public class SimpleEventNotifier extends Observable {

@@ -41,8 +41,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 2009-08-09 03:20:33 PM
  * @since 1.0.0

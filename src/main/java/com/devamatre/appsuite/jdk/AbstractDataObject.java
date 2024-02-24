@@ -43,7 +43,8 @@ import java.beans.PropertyChangeSupport;
  * removing listeners and you would have to manage firing of all added listeners
  * on that class.
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com) Created on Aug 9, 2009
+ * @author Rohtash Lakra
+ * @created Aug 9, 2009
  * @version 1.0
  */
 public class AbstractDataObject implements DataObject {

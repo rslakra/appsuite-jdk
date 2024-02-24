@@ -49,7 +49,7 @@ import java.util.Vector;
  * <p>
  * The <code>DomParser</code> TODO Define Purpose here
  *
- * @author Rohtash Singh (rohtash.lakra@devamatre.com)
+ * @author Rohtash Lakra
  * @date Aug 10, 2009 10:55:05 PM
  */
 public class DomParser {

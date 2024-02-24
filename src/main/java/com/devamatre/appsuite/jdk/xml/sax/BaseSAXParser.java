@@ -44,7 +44,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * <p>
  * This the base class for handling xml files.
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @since 2008/09/11
  */
 public abstract class BaseSAXParser extends DefaultHandler {

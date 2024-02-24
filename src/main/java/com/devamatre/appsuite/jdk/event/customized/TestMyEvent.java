@@ -33,7 +33,7 @@ package com.devamatre.appsuite.jdk.event.customized;
 /**
  * This <class>TestMyEvent</class> class
  *
- * @author Rohtash Singh
+ * @author Rohtash Lakra
  * @version Feb 3, 2006
  */
 

@@ -36,8 +36,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * An annotation that has more than one method, is called Multi-Value
- * annotation.
+ * An annotation that has more than one method, is called Multi-Value annotation.
  * <p>
  * We can provide the default value also.
  *

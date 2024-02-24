@@ -60,7 +60,7 @@ package com.devamatre.appsuite.jdk.time;
  * the hour, e.g. by subtracting 12, you will find it easier to work with the
  * <code>int</code> value returned by the NumberDisplay getValue() method.
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @created 01/12/2012 (dd/mm/yyyy)
  * @since 1.0.0

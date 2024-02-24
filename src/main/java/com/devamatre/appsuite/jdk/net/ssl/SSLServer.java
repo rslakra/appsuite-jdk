@@ -44,8 +44,8 @@ import java.io.OutputStreamWriter;
 import java.security.KeyStore;
 
 /**
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
- * @author Rohtash Lakra (rohtash.singh@gmail.com) May 24, 2005
+ * @author Rohtash Lakra
+ * @created May 24, 2005
  * @version 1.0.0
  * @since 1.0.0
  */

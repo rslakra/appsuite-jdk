@@ -36,7 +36,7 @@ package com.devamatre.appsuite.jdk.xml;
  * The <code>XmlConstants</code> TODO Define Purpose here
  * 
  * 
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @date Aug 01, 2010 1:19:38 PM
  */
 public interface XmlConstants {

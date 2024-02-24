@@ -47,8 +47,7 @@ import java.io.PrintWriter;
  * the message for successful creation of the file. If any failure occurs, then
  * a failure message is also displayed.
  * 
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
-* @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @created 2007-01-24 03:38:57 PM
  * @version 1.0.0
  * @since 1.0.0

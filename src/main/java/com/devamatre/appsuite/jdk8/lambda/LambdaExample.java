@@ -3,7 +3,7 @@ package com.devamatre.appsuite.jdk8.lambda;
 import java.util.function.Function;
 
 /**
- * @author Rohtash Lakra (rslakra.work@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @since Dec 30, 2020 16:02:34
  */

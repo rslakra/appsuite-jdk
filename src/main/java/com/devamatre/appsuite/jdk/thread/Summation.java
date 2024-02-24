@@ -10,8 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 /**
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
- * @author Rohtash Lakra (rslakra.work@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @Created Oct 12, 2019 3:40:02 PM
  */

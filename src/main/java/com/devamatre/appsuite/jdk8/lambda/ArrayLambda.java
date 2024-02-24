@@ -3,7 +3,7 @@ package com.devamatre.appsuite.jdk8.lambda;
 import java.util.stream.IntStream;
 
 /**
- * @author Rohtash Lakra (rslakra.work@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @since Jul 19, 2021 20:34:18
  */

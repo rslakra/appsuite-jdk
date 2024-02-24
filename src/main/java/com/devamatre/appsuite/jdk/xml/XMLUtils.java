@@ -35,7 +35,7 @@ package com.devamatre.appsuite.jdk.xml;
  * <p>
  * The <code>XmlUtils</code> TODO Define Purpose here
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @date Aug 21, 2010 1:06:19 PM
  */
 public enum XMLUtils {

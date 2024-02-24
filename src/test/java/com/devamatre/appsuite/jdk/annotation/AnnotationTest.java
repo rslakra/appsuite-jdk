@@ -1,5 +1,6 @@
 package com.devamatre.appsuite.jdk.annotation;
 
+import com.devamatre.appsuite.jdk8.annotation.MarketAnnotation;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,7 @@ public class AnnotationTest {
     // LOGGER
     private static final Logger LOGGER = LoggerFactory.getLogger(AnnotationTest.class);
 
+    @MarketAnnotation
     private void doReturn(final boolean isValid) {
         LOGGER.debug("Start doReturn");
         if (isValid) {

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.OptionalInt;
 
 /**
- * @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @Created Mar 6, 2019 10:01:39 AM
  */

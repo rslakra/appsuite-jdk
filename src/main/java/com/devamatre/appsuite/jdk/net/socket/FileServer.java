@@ -45,7 +45,7 @@ import java.net.Socket;
  * existence of the directory name specified. Sets up the server. Delegates the
  * requests to be handled to an object of the ConnectionHandler class.
  *
- * @author Rohtash Singh (rohtash.singh@devamatre.com)
+ * @author Rohtash Lakra
  * @since Aug 3, 2010
  *
  */

@@ -32,8 +32,7 @@ package com.devamatre.appsuite.jdk.net.emails;
 
 /**
  * 
- * @author Rohtash Lakra (rohtash.lakra@devamatre.com)
-* @author Rohtash Lakra (rohtash.singh@gmail.com)
+ * @author Rohtash Lakra
  * @created 2008-06-12 02:49:08 PM
  * @version 1.0.0
  * @since 1.0.0

@@ -34,7 +34,6 @@ import java.util.ArrayList;
 
 /**
  * @author Rohtash Lakra
-* @author Rohtash Lakra (rohtash.singh@gmail.com)
  * @version 1.0.0
  * @created 2018-02-10 01:20:27 PM
  * @since 1.0.0

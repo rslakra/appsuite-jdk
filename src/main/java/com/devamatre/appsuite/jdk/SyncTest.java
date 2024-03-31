@@ -51,7 +51,7 @@ public class SyncTest {
             if (ctr == 50000) {
                 newCtr = 1;
                 ctr = 1;
-                System.out.println("Loop Ending...");
+                System.out.println("WhileLoop Ending...");
                 break;
             }
         }

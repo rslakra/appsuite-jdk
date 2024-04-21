@@ -8,7 +8,7 @@ package com.devamatre.appsuite.jdk;
 public class StaticClass {
 
     public static void callStaticWithNullInstance() {
-        System.out.println("callStaticWithNullInstance");
+        System.out.println("callStaticWithNullInstance:" + Thread.currentThread().getName());
     }
 
     /**

@@ -33,65 +33,80 @@ package com.devamatre.appsuite.jdk;
 import java.util.Enumeration;
 import java.util.Properties;
 
-public class AllProperties {
+public class PropertiesTest {
 
-    private Properties allProperties;
+    private Properties properties;
 
-    public AllProperties(Properties prop) {
-        this.allProperties = prop;
-        allProperties.put("AllProperties", "AllProperties");
+    /**
+     *
+     */
+    public PropertiesTest() {
+        this(System.getProperties());
     }
 
-    public void addValue(String key, String value) {
-        allProperties.put(key, value);
+    /**
+     * @param properties
+     */
+    public PropertiesTest(Properties properties) {
+        this.properties = properties;
+        this.properties.put("PropertiesTest", "PropertiesTest");
     }
 
-    public void printValues() {
-        Enumeration keys = allProperties.keys();
+    /**
+     * @param key
+     * @param value
+     */
+    public void addProperty(String key, String value) {
+        properties.put(key, value);
+    }
+
+    /**
+     *
+     */
+    public void printProperties() {
+        Enumeration keys = properties.keys();
         while (keys.hasMoreElements()) {
             String key = (String) keys.nextElement();
-            String value = (String) allProperties.get(key);
+            String value = (String) properties.get(key);
             System.out.println(key + ": " + value);
         }
     }
 
-    private Properties mProperties;
-
-    public AllProperties() {
-        mProperties = new Properties();
-        mProperties.put("Properties", "MyProperties");
-    }
-
-    public String getValue(String key) {
-        return (String) mProperties.get(key);
-    }
-
-    public void updateProperties() {
-        AllProperties flatProperties = new AllProperties(mProperties);
-        flatProperties.addValue("FirstName", "Rohtash");
-        flatProperties.addValue("Properties", "Testing -5 Error");
+    /**
+     * @param properties
+     */
+    public void updateProperties(Properties properties) {
+        PropertiesTest flatProperties = null;
+        if (properties == null) {
+            flatProperties = new PropertiesTest();
+        } else {
+            flatProperties = new PropertiesTest(properties);
+        }
+        flatProperties.addProperty("FirstName", "Rohtash");
+        flatProperties.addProperty("Properties", "Testing -5 Error");
         System.out.println("========== All Properties ===========");
-        flatProperties.printValues();
+        flatProperties.printProperties();
         System.out.println("======================================");
     }
 
-    public void printMyProperties() {
-        Enumeration keys = mProperties.keys();
-        while (keys.hasMoreElements()) {
-            String key = (String) keys.nextElement();
-            String value = (String) mProperties.get(key);
-            System.out.println(key + ": " + value);
-        }
+    /**
+     *
+     */
+    public void updateProperties() {
+        updateProperties(new Properties());
     }
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
-        AllProperties mProperties = new AllProperties();
-        System.out.println("========== Before Change, My Properties ===========");
-        mProperties.printMyProperties();
+        PropertiesTest instance = new PropertiesTest();
+        System.out.println("========== Before Properties Change ===========");
+        instance.printProperties();
         System.out.println("======================================");
-        mProperties.updateProperties();
-        System.out.println("========== After Change, My Properties ===========");
-        mProperties.printMyProperties();
+        instance.updateProperties();
+        System.out.println("========== After Properties Change ===========");
+        instance.printProperties();
         System.out.println("======================================");
     }
 }

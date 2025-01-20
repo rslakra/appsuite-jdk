@@ -144,7 +144,7 @@ public class SSLSocketClientWithTunneling {
 			});
 			
 			/*
-			 * send http request
+			 * send https request
 			 *
 			 * See SSLSocketClient.java for more information about why there is
 			 * a forced handshake here when using PrintWriters.
@@ -190,7 +190,7 @@ public class SSLSocketClientWithTunneling {
 		byte b[];
 		try {
 			/*
-			 * We really do want ASCII7 -- the http protocol doesn't change with
+			 * We really do want ASCII7 -- the https protocol doesn't change with
 			 * locale.
 			 */
 			b = msg.getBytes("ASCII7");

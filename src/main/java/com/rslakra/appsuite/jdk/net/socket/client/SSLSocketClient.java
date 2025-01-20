@@ -51,7 +51,7 @@ public class SSLSocketClient {
 			SSLSocket socket = (SSLSocket) factory.createSocket("www.verisign.com", 443);
 
 			/*
-			 * send http request
+			 * send https request
 			 *
 			 * Before any application data is sent or received, the SSL socket
 			 * will do SSL handshaking first to set up the security attributes.

@@ -105,7 +105,7 @@ public class SSLSocketClientWithClientAuth {
 			SSLSocket socket = (SSLSocket) factory.createSocket(host, port);
 
 			/*
-			 * send http request
+			 * send https request
 			 *
 			 * See SSLSocketClient.java for more information about why there is
 			 * a forced handshake here when using PrintWriters.

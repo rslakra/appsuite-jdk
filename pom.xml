@@ -36,8 +36,8 @@
         <checkstyle.threshold>0</checkstyle.threshold>
 
         <!-- appsuite-core -->
-        <appsuite-core.version>0.0.58</appsuite-core.version>
-        <appsuite-http-client.version>0.0.19</appsuite-http-client.version>
+        <appsuite-core.version>0.0.70</appsuite-core.version>
+        <appsuite-protocols.version>0.0.20</appsuite-protocols.version>
 
         <!-- logging -->
         <slf4j-api.version>2.0.6</slf4j-api.version>
@@ -91,8 +91,8 @@
 
         <dependency>
             <groupId>com.rslakra.appsuite</groupId>
-            <artifactId>appsuite-http-client</artifactId>
-            <version>${appsuite-http-client.version}</version>
+            <artifactId>appsuite-protocols</artifactId>
+            <version>${appsuite-protocols.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->

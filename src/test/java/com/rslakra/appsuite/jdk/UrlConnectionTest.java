@@ -29,8 +29,7 @@
 package com.rslakra.appsuite.jdk;
 
 import com.rslakra.appsuite.core.BeanUtils;
-import com.rslakra.appsuite.http.HTTPUtils;
-import com.rslakra.appsuite.http.Response;
+import com.rslakra.appsuite.protocol.http.Response;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 import java.io.BufferedReader;
@@ -44,7 +43,7 @@ public class UrlConnectionTest {
 
     public static void main(String[] args) {
         String urlString = "https://devamatre.com/";
-        Response httpResponse = HTTPUtils.executeGetRequest(urlString, null, true);
+        Response httpResponse = com.rslakra.appsuite.protocol.http.HTTPUtils.executeGetRequest(urlString, null, true);
         System.out.println(httpResponse.getRequestHeaders());
 
         String formActionValue = extractFormActionValue(httpResponse.getDataBytes());
@@ -77,8 +76,8 @@ public class UrlConnectionTest {
                 while ((line = bReader.readLine()) != null) {
                     if (line.trim().startsWith(startString)) {
                         formActionValue =
-                            line.substring(line.indexOf(startString) + startString.length(),
-                                           (line.length() - endString.length()));
+                                line.substring(line.indexOf(startString) + startString.length(),
+                                        (line.length() - endString.length()));
                         formActionValue = StringEscapeUtils.unescapeHtml3(formActionValue);
                         break;
                     }

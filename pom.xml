@@ -37,7 +37,7 @@
 
         <!-- appsuite-core -->
         <appsuite-core.version>0.0.70</appsuite-core.version>
-        <appsuite-protocols.version>0.0.20</appsuite-protocols.version>
+        <appsuite-protocols.version>0.0.22</appsuite-protocols.version>
 
         <!-- logging -->
         <slf4j-api.version>2.0.6</slf4j-api.version>

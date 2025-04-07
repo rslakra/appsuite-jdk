@@ -30,14 +30,9 @@
  *****************************************************************************/
 package com.rslakra.appsuite.jdk.net.socket.client;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
+import java.io.*;
 
 /**
  * Created by IntelliJ IDEA. User: rohtash.singh Date: May 27, 2005 Time: 5:35:29 PM To change this template use Options
@@ -95,7 +90,7 @@ public class HttpClient {
         out.close();
         sslSocket.close();
 
-    }// End
+    } // End
 
     public static void main(String[] args) {
         try {

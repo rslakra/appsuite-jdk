@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * @author Rohtash Lakra (work.lakra@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @since 05/29/2024 5:44 PM
  */

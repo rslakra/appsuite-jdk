@@ -1,7 +1,7 @@
 package com.rslakra.appsuite.jdk11;
 
 /**
- * @author Rohtash Lakra (rslakra.work@gmail.com)
+ * @author Rohtash Lakra
  * @version 1.0.0
  * @since 05/05/2024 1:58 PM
  */
